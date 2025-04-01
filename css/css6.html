@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+        <style>
+           .h1_cls{
+            color: blue;
+           }
+           h1.h1_cls{
+            color: cyan;
+           }
+           .h1cls2{
+            /* by giving important will give highest priority */
+            /* color: rgb(255, 213, 0) !important; */
+            border: 1px solid;
+           }
+           .my_div{
+            height: 150vh;
+           }
+           .h1_2{
+            /* elemnt will not move beyond top 10px while scroll to the top */
+            position: sticky;
+            top:10px;
+           }
+        </style>
+</head>
+<body>
+    <h1 class="h1_cls h1cls2 dfsd">this is heading1</h1>
+    <h1 class="h1_2">this is heading1</h1>
+    <div class="my_div"></div>
+<!-- 
+    overflow
+    list-style
+    animation
+    pseudo-classes
+-->
+</body>
+</html>

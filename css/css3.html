@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+        <style>
+
+          .mydiv{
+            height: 150vh;
+            background-color: antiquewhite;
+          }
+          .my_para{
+            /* element will not scroll */
+            position: fixed;
+            top:50px;
+            left:300px;
+          }
+          .my_para2{
+            /* element will scroll */
+            position: absolute;
+            top:400px;
+            left:300px;
+          }
+          h1{
+            position: absolute;
+            top:10px;
+            left:300px;
+          }
+          .mydiv2{
+            position: relative;
+          }
+          .my_img{
+            width: 50%;
+            height: 100px;
+          }
+          .desc{
+            position: absolute;
+            top:50px;
+            left:30%;
+            background-color: red;
+            padding: 4px;
+          }
+          .mydiv3{
+            position: relative;
+          }
+          
+        </style>
+</head>
+<body>
+    <p class="my_para">6:16PM</p>
+    <p class="my_para2">6:13434PM</p>
+    <div class="mydiv">
+        hi hellow
+    </div>
+    <div class="mydiv2">
+        <h2>this is heading 2</h2>
+        <h1>this heading1</h1>
+    </div>
+    <div class="mydiv3">
+            <b class="desc">nice place</b>
+    <img class="my_img" src="https://cdn.pixabay.com/photo/2025/03/21/21/22/roche-9485693_1280.jpg" alt="">
+    </div>
+</body>
+</html>

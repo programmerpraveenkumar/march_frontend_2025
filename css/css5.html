@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+        <style>
+            h1{
+              float: right;
+              width: 20%;
+            }
+          h2{
+            color: rgb(2, 224, 113);
+          }
+            /* space represents the parent */
+           .div2 h2{
+              color: red;
+            }
+            .div4 .child_div1 h2{
+              color: brown;
+            }
+            section h2{
+              color: blue;
+            }
+        </style>
+</head>
+<body>
+     <div>
+          <h1>this is heading1</h1>
+          <h1>this is heading1</h1>
+     </div>
+<hr>
+<div class="div2">
+  <h2>this is heading1</h2>
+  <h2>s is heading1</h2>
+</div>
+<div class="div3">
+   <h2>this is heading1</h2>
+  <h2>this is heading1</h2>
+</div>
+
+<div class="div4">
+  <h2>this is heading1</h2>
+  <div class="child_div1">
+    <h2>this is heading1</h2>
+    <h2>this is heading1</h2>
+  </div>
+</div>
+
+<section>
+  <h2>this is heading1</h2>
+  <h2>this is heading1</h2>
+</section>
+
+</body>
+</html>
