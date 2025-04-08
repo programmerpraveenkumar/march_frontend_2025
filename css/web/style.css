@@ -79,13 +79,18 @@ ul{
 .center-content h2{
             text-align: center;
         }
+        .center-content{
+            color: rgb(255, 0, 204);
+      }
 /*
  media query
     how our css will be loaded in different device
  /* */ 
 
  /*if widh is 0 to 600px apply below css code */
- @media only screen and (max-width: 480px) {
+ @media only screen and (max-width:480px){
+
+ /* @media only screen and (max-width: 480px) { */
     header{
         justify-content: space-between;
     }

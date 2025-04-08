@@ -1,0 +1,37 @@
+why javascript
+    variable declaration
+    user interaction
+        mouse events
+        keyborard
+        dom manipulation
+            add or remove the html element
+            add or remove the css clsss on the element
+            add or remove the css style on the element
+            add or remove the keyboard or mouse event on the element
+            input validation
+        rest api integration(server integration)
+        oops
+        functional 
+
+
+javascript compiler
+    node js
+    2008-> google->v8 engine(c++)
+    2010-->node(to run the js in server)
+    browser also have js compiler
+
+<style></style>
+
+<script></script>
+    internal,
+        define in the html page
+        so can be used in same page
+    external
+        define in external js page
+        so it can be used in other pages
+
+        
+
+
+
+        
