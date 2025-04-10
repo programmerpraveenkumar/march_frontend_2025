@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //index array
+        //to store the multiple values
+        let ar_name = ["first","asd","asdfds"];
+        //data will be stored from 0,1,2,3.....
+        console.log(ar_name[1]);
+        console.log(ar_name[5]);//no data.so undefined
+        console.log(ar_name);
+        console.log("before adding ",ar_name.length);//3
+        ar_name.push("new value");//added to array
+        console.log("after adding ",ar_name.length);//4
+        console.log(ar_name);
+
+        for(let i =0;i<ar_name.length;i++){
+            console.log(ar_name[i]);
+        }
+
+        console.log("----array---");
+
+        for(let key in ar_name){
+            console.log(ar_name[key]);
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
