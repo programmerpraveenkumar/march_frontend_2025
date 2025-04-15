@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //basic validation..
+        function validate(){
+            //get the value from input
+            let email = document.querySelector("#email_input").value;
+            let pwd = document.querySelector("#pwd_put").value;
+            let h1_ele = document.querySelector(".error");
+            if(email == ""){
+                // alert("Please enter email!!");
+                h1_ele.innerHTML = "Please enter email!!";
+            }
+            else if(pwd == ""){
+                //showin the alert in the browser
+                // alert("Please enter Password!!");
+                h1_ele.innerHTML = "Please enter Password!!";
+            }else{
+                // alert("all ok..ready to validate with server..");
+                h1_ele.innerHTML = "all ok..ready to validate with server..";
+            }
+        }
+        
+    </script>
+    <style>
+        .input{
+           background-color: aliceblue;
+           width: 50%;
+           height: 50px;
+           font-size: 25px;;
+           margin: 10px;;
+        }
+    </style>
+</head>
+<body>
+        <div>
+            <input id="email_input" class="input" placeholder="Enter Email" type="text">
+        </div>
+        <div>
+            <input   id="pwd_put"  class="input" placeholder="Enter Password"  type="text">
+        </div>
+        <div>
+            <input  onclick="validate()"  class="input"  value="Login" type="button">
+        </div>
+<h1 class="error">--write the error--</h1>
+</body>
+</html>

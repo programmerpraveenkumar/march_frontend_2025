@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //basic validation..
+        function addCssToEle(){
+            //getting the element by tag name
+            let h1_ele = document.querySelector("h1");
+            //to add css style to an element
+            h1_ele.style.backgroundColor = 'red';
+        }
+        
+    </script>
+ <style>
+    .myclass{
+            background-color: chocolate;
+            color: #fff;
+            border: 10px solid black;
+            width: 50%;
+    }
+ </style>
+</head>
+<body>
+        
+<h1 class="myclass">--sample content--</h1>
+<button onclick="addCssToEle()">Click to change</button>
+</body>
+</html>
+
+<!-- 
+    getElementsByClassName()
+    querySelector()-> will get the element by symbols.but it will return only one element..
+    querySelectorAll()-> will get the element by symbols.but it will return only one or more elements..
+    classList-> will give  the classes of the element
+    classList.add()->  add the css classes of the element
+    style->  add the css style of the element
+-->

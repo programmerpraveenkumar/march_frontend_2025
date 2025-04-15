@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printMessage(){
+            //get the element By id
+            let my_elem = document.getElementById("div_id");
+            // console.log(my_elem);
+            //innerHTMl will write into the element
+            my_elem.innerHTML = '<input/>';
+        }
+        function printMessage2(){
+            // get the element By class name..but it will return in the array
+            let my_elem = document.getElementsByClassName("div_2");
+            // //need to get element by array
+            // console.log(my_elem);
+
+            // //innerHTMl will write into the element
+            // my_elem[2].innerHTML = 'this is message 2';
+            for(let i = 0;i<my_elem.length;i++){
+                    my_elem[i].innerHTML= "this is message and index is "+i;
+            }    
+        }
+        
+    </script>
+    <style>
+        .mybtn{
+            color: #fff;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        events
+            keyboard 
+            mouse
+      -->
+    <div id="div_id"></div>
+    <button class="mybtn" onclick="printMessage()">Click me for id</button>
+    <!-- <h1   onclick="printMessage()">hi im h1 don't click me</h1> -->
+    <div class="div_2"></div>
+    <div class="div_2"></div>
+
+    <div class="div_2"></div>
+
+    <div class="div_2"></div>
+
+    <button class="mybtn" onclick="printMessage2()">Click me for class</button>
+</body>
+</html>

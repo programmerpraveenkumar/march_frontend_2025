@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printMessage(){
+            let my_elem = document.getElementById("h1_id");
+            my_elem.innerHTML = 'updated in javascrtipt during button click';
+            console.log("sample message");
+        }
+    </script>
+    <style>
+        .mybtn{
+            color: #fff;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        events
+            keyboard 
+            mouse
+      -->
+    <h1 id="h1_id">hi this is h1..you cant change me</h1>
+    <button class="mybtn" onclick="printMessage()">Click me</button>
+    <!-- <h1   onclick="printMessage()">hi im h1 don't click me</h1> -->
+</body>
+</html>

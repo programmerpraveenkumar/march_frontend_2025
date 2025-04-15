@@ -17,13 +17,56 @@
         printMyName();
 
         function add(num1,num2){
-
             let res = num1+num2;
             console.log("addition result ",res);
-            
+
+            //return shuld be always end of the function
+            return res;//returning the result
         }
 
-        add(2,5)
+        let answer = add(2,5);
+        console.log("from function ",answer);
+        //check child by age
+        //if age is below 5,consider child 
+
+        function checkChildAge(age){
+            if(age >5){
+                return "this is not child";
+            }else{
+                return "this is child";
+            }
+            console.log("this is final");
+        }
+        let first_data  = checkChildAge(6);
+        let second_data  = checkChildAge(2);
+        console.log(first_data,second_data);
+
+        function loop(count){
+            for(i=0;i<count;i++){
+                    // if(i == 0){
+                    //     console.log("zero");
+                    // }
+                    // else if(i ==1){
+                    //     console.log("one");
+                    // }
+                    // switch(i){
+                    //     case 1:
+                    //         //console..
+                    //     break;
+                    //     case 2:
+                    //         //console..
+                    //     break;
+                    // }
+                    //...etc
+            }
+        }
+
+
+
+loop(5)
+ 
+
+        
     </script>
 </head>
 <body>

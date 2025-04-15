@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //basic validation..
+        function addCssToEle(){
+            //classList-> will give the css classes for an element
+            //classList.add()-> adding the css class to an element
+            //classsList.remove()->remove the css class to an element
+            let h1_ele = document.querySelector(".error");
+            h1_ele.classList.add("h1_c");//adding css class dynamically for an element
+        }
+        
+    </script>
+    <style>
+        .h1_c{
+           background-color: rgb(0, 26, 255);
+           width: 50%;
+           height: 50px;
+           font-size: 25px;;
+           margin: 10px;;
+        }
+    </style>
+</head>
+<body>
+        
+<h1 class="error">--write the error--</h1>
+<button onclick="addCssToEle()">Click to change</button>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printMessage(){
+            //will return only the first element
+            let my_elem = document.querySelector("#div_id");
+            let my_elem2 = document.querySelector(".div_cls");
+            // console.log(my_elem);
+            //innerHTMl will write into the element
+            my_elem.innerHTML = '<input/>';
+            my_elem2.innerHTML = "this is from class name";
+        }
+        function printMessage2(){
+            //will return only the all element in the array
+            let my_elem2 = document.querySelectorAll(".div_cls");
+            for(let i = 0;i<my_elem2.length;i++){
+                my_elem2[i].innerHTML= "this is message and index is "+i;
+            }   
+        }
+        
+    </script>
+    <style>
+        .mybtn{
+            color: #fff;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="div_cls">aefwa</div>
+    <div class="div_cls">awfdfg</div>
+    <div class="div_cls">efw</div>
+    <div class="div_cls">234234</div>
+    <div id="div_id"></div>
+    <button class="mybtn" onclick="printMessage()">Click me for id</button>
+
+    <button class="mybtn" onclick="printMessage2()">for replace all elements</button>
+</body>
+</html>
