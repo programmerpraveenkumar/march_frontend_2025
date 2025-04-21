@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+        <script>
+            function printMessage(){
+                console.log("sample button click .....");
+            }
+            function printMessage2(){
+                let  input_val = document.querySelector("#input_1").value//get the value from input box
+                console.log(input_val,input_val.length);
+                if(input_val.length < 8 || input_val.length >12 ){
+                    document.querySelector(".print_error").innerHTML = "Please enter 8 to 12";
+                }else{
+                    document.querySelector(".print_error").innerHTML = "u r crct.."
+                }
+               
+            }
+            function input_focus(){
+                console.log("input is focus..");
+            }
+            function input_blur(){
+                console.log("input loosing focus..");
+                
+            }
+        </script>
+        <style>
+            h1{
+                background-color: red;
+            }
+        </style>
+</head>
+<body>
+        <h1 onmouseenter="console.log('mouse is entered..')">this is heading..</h1>
+        
+        <input type="text" onkeydown="console.log('key down')">
+        <input type="text" id="input_1" onkeyup="printMessage2()"/>
+
+        <h1 class="print_error"></h1>
+        <input type="text"  onblur="input_blur()" onfocus="input_focus()">
+        <input type="text" placeholder="Enter Blur" onblur="input_blur()">
+
+
+<!-- adding the script end of the page -->
+<script>
+    /*
+    Mouse Event:
+        onclick
+        ondblclick
+
+    keyboard
+        onkeydown-> function will be trigger while key down
+        onkeypress -- removed infuture
+        onkeyup
+
+    onfoucs
+    onblur
+    
+    */
+ </script>
+</body>
+</html>
+

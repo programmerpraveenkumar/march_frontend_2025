@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        promise function -> promise function will return  tat action is completed or not
+        fetch();->to communicate to the server.
+        await calling_proms();
+        console.log("helow")
+    -->
+        <script>
+            //async->parallel
+           async function getResponse(){
+                //await will wait till gets the respone from server.
+                //fetch is promise method..so await shuld be added before calling..
+                let res = await fetch("https://www.apirequest.in/user/api/");
+                console.log(res);
+                //404-->page not found
+                /*
+                    2**->success
+                    4**->failure due to server
+                    5**->failure due to client data
+                */
+                
+            }
+            getResponse();
+            //other code
+            /*
+                server->
+                    url endpoint
+                    method(get,post,put,delete)
+                    data to pass.(optional)
+                    http-header to pass(option)
+            */
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

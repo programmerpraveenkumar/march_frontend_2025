@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+        <script>
+            /*
+                settimeOut();
+                    parmas::function,time in ms
+            */
+          //showing the digital clock for every 5 secns
+           function showTime(){
+           
+            document.querySelector("h1").innerHTML = hours+" - " + min+" - "+sec;
+           }
+           
+
+        //will call the funcion for every 5 secs
+        //    setInterval(showTime,5000)
+           
+        </script>
+        <style>
+            /* odd seconds */
+            .red{
+                    background-color: red;
+            }
+            /* for even number in seconds */
+            .blue{
+                background-color: blue;
+            }
+        </style>
+       
+</head>
+<body>
+       
+
+
+<h1 id="clock"></h1>
+<script>
+    showTime()
+</script>
+</body>
+</html>
+
