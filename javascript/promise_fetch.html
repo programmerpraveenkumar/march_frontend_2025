@@ -12,10 +12,25 @@
     -->
         <script>
             //async->parallel
-           async function getResponse(){
+           async function postResponse(){
                 //await will wait till gets the respone from server.
                 //fetch is promise method..so await shuld be added before calling..
-                let res = await fetch("https://www.apirequest.in/user/api/",{"method":"GET"});
+                let my_data = {
+                        "email":"TEST@gmail.com",
+                        "password":"pwd",
+                        "name":"sample name"
+                    }
+                let res = await fetch(
+                    "https://www.apirequest.in/user/api/",
+                    {"method":"POST","body":JSON.stringify(my_data),"headers":{"content-type":"application/json"}}
+                );
+                //if only success
+                if(res.ok){
+                    let final_res = await res.json();//to get the final response of server.
+                    console.log(final_res);
+                }else{
+                    alert('Error while calling server..')
+                }
                 console.log(res);
                 //404-->page not found
                 /*
@@ -25,7 +40,7 @@
                 */
                 
             }
-            getResponse();
+            postResponse();
             //other code
             /*
                 server->

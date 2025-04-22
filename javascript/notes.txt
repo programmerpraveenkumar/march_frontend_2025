@@ -32,6 +32,19 @@ javascript compiler
 
         
 
+use of rest api is to get the data from server.
+rest api integration(server integration)
+    url endpoint()
+    
+    method type(get,post,put,patch,delete)
+
+    data to send (optional)(queryparam,request body)
+        queryparam will be added in the url itself.will be available for all http methods
+        requestbody-> will be added seprate from the url.(will be used for oly for post,put)
+
+    http header type(optional)
+        add the content_type in the request.
+            Ex:: text,json,file,image,video
 
 
-        
+    
