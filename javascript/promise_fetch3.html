@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        promise function -> promise function will return  tat action is completed or not
+        fetch();->to communicate to the server.
+        await calling_proms();
+        console.log("helow")
+    -->
+        <script>
+            //async->parallel
+           async function call_api(){
+            //getting the value from input
+           let name =  document.querySelector("#name_input").value;
+           let email =  document.querySelector("#email_input").value;
+           let pwd =  document.querySelector("#pwd_input").value;
+                let my_data = {
+                        "email":email,
+                        "password":pwd,
+                        "name":name
+                    }
+                let res = await fetch(
+                    "https://www.apirequest.in/user/api/",
+                    {"method":"POST","body":JSON.stringify(my_data),"headers":{"content-type":"application/json"}}
+                );
+                let final_res = await res.json();
+                //if only success
+                if(res.ok){
+                   //to get the final response of server.
+                    console.log(final_res);
+                    document.querySelector("h1").innerHTML = final_res['msg']
+                }else{
+                    document.querySelector("h1").innerHTML = "Error "+final_res['msg']
+                    // alert('Error while calling server..')
+                }
+                console.log(res);
+                //404-->page not found
+                /*
+                    2**->success
+                    4**->failure due to server
+                    5**->failure due to client data
+                */
+                
+            }
+            // postResponse();
+            //other code
+            /*
+                server->
+                    url endpoint
+                    method(get,post,put,delete)
+                    data to pass.(optional)
+                    http-header to pass(option)
+            */
+        </script>
+</head>
+<body>
+    <div>
+        <input id="name_input" type="text" placeholder="Enter Name">
+    </div>
+    <div>
+        <input id="email_input"  type="text" placeholder="Enter Email">
+    </div>
+    <div>
+        <input id="pwd_input"  type="text" placeholder="Enter Password">
+    </div>
+    <div>
+        <input type="button" onclick="call_api()" value="Click me">
+    </div>
+    <h1 id="response"></h1>
+    
+</body>
+</html>
